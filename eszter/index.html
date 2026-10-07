@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 lehetőség</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #2b163d 0%, #4d2b6d 35%, #b79ae6 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: min(1000px, 90%);
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #8b8b8b;
+            margin-bottom: 30px;
+            font-size: clamp(2rem, 3vw, 3rem);
+        }
+
+        .options {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .bottom-row {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            width: 100%;
+        }
+
+        .card {
+            width: 260px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .card-shape {
+            width: 100%;
+            background: transparent;
+            border-radius: 20px;
+            box-shadow: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            overflow: hidden;
+            position: relative;
+            min-height: 420px;
+        }
+
+        .card-shape:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 22px 35px rgba(80, 57, 112, 0.25);
+        }
+
+        .top-card {
+            margin-bottom: 10px;
+        }
+
+        .image-box {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 20px;
+            z-index: 0;
+        }
+
+        .image-box img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            image-rendering: auto;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            padding: 18px 24px 28px;
+            text-align: center;
+            margin-top: auto;
+            background: rgba(255, 255, 255, 0.28);
+            width: 100%;
+            border-radius: 0 0 20px 20px;
+        }
+
+        .content h2 {
+            margin: 0 0 12px;
+            color: #3d2a5c;
+            font-size: 1.4rem;
+        }
+
+        .content p {
+            margin: 0 0 16px;
+            color: #5e4d77;
+            line-height: 1.5;
+            min-height: 48px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px 18px;
+            border: none;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #7c5ad8, #9d7df0);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.2s ease;
+        }
+
+        button:hover {
+            opacity: 0.96;
+        }
+
+        @media (max-width: 700px) {
+            .bottom-row {
+                flex-direction: column;
+                align-items: center;
+                gap: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Ki a cuki?</h1>
+
+        <div class="options">
+            <div class="card top-card">
+                <div class="card-shape">
+                    <div class="image-box"><img src=".//eszter1.png" alt=""></div>
+                    <div class="content">
+                        <h2>Eszter</h2>
+                        
+                        <button type="button">Kiválasztás</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-row">
+                <div class="card">
+                    <div class="card-shape">
+                        <div class="image-box"><img src=".//eszter2.png" alt=""></div>
+                        <div class="content">
+                            <h2>Eszter</h2>
+                           
+                            <button type="button">Kiválasztás</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-shape">
+                        <div class="image-box"><img src=".//eszter3.png" alt=""></div>
+                        <div class="content">
+                            <h2>Eszter</h2>
+                           
+                            <button type="button">Kiválasztás</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelectorAll('button').forEach(function(button) {
+            button.addEventListener('click', function() {
+                window.location.href = 'vege.html';
+            });
+        });
+    </script>
+</body>
+</html>

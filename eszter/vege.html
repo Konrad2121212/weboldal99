@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>igazad vaaaaan</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #2b163d 0%, #4d2b6d 35%, #b79ae6 100%);
+      font-family: Arial, sans-serif;
+      color: #f4f1ff;
+    }
+
+    .page {
+      width: min(1000px, 90%);
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      margin: 0 0 30px;
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      color: #f4f1ff;
+      letter-spacing: 1px;
+    }
+
+    .image-row {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .image-box {
+      width: min(320px, 40vw);
+      height: 420px;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+      background: #d7c7ff;
+    }
+
+    .image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+      background-color: #d7c7ff;
+      padding: 6px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>igazad vaaaaan</h1>
+
+    <div class="image-row">
+      <div class="image-box">
+        <img src="./szivecske.png" alt="Első kép" />
+      </div>
+      <div class="image-box">
+        <img src="./csikóhal.png" alt="Második kép" />
+      </div>
+    </div>
+  </div>
+</body>
+</html>
